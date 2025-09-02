@@ -1,7 +1,7 @@
 # hello_flet.py
 # CCCS 106 - Week 2 Lab Exercise
 # First Flet GUI Application
-# Student: [Your Name]
+# Student: Graciella Ann Z. Villamer
 
 import flet as ft
 from datetime import datetime
@@ -10,7 +10,7 @@ def main(page: ft.Page):
     # Page configuration
     page.title = "CCCS 106 - Hello Flet"
     page.window.width = 500
-    page.window.height = 400
+    page.window.height = 600
     page.padding = 20
     page.theme_mode = ft.ThemeMode.LIGHT
     
@@ -27,8 +27,8 @@ def main(page: ft.Page):
     student_info = ft.Column([
         ft.Text("Student Information:", size=18, weight=ft.FontWeight.BOLD),
         ft.Text("Name: Gracielle Ann Z. Villamer", size=14),
-        ft.Text("Student ID: 231003956", size=14),
-        ft.Text("Program: BSCS", size=14),
+        ft.Text("Student ID: 231003965", size=14),
+        ft.Text("Program: BSCS 3B", size=14),
         ft.Text(f"Date: {datetime.now().strftime('%B %d, %Y')}", size=14),
     ])
     
@@ -59,7 +59,7 @@ def main(page: ft.Page):
         name_input.value = ""
         greeting_text.value = ""
         page.update()
-    
+  
     def show_info(e):
         info_text = (
             "This is a Flet 0.28.3 application built for CCCS 106.\n"
@@ -69,20 +69,19 @@ def main(page: ft.Page):
         
         # Create dialog
         dialog = ft.AlertDialog(
+            modal=True,
             title=ft.Text("Application Information"),
             content=ft.Text(info_text),
             actions=[
                 ft.TextButton("Close", on_click=lambda e: close_dialog(dialog))
             ]
         )
-        page.dialog = dialog
-        dialog.open = True
-        page.update()
+        page.open(dialog)
     
     def close_dialog(dialog):
         dialog.open = False
         page.update()
-    
+
     # Buttons with styling
     hello_button = ft.ElevatedButton(
         "Say Hello",
