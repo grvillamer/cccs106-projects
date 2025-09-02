@@ -7,8 +7,8 @@
 
 ## Git Configuration
 
-### Repository Setup
-- **GitHub Repository:** https://github.com/grvillamer/cccs106-projects
+### Repository Setuphttps://github.com/grvillamer/cccs106-projects
+- **GitHub Repository:** 
 - **Local Repository:** ✅ Initialized and connected
 - **Commit History:** 4 commits with descriptive messages
 
