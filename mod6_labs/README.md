@@ -95,7 +95,7 @@ The app integrates with the OpenWeatherMap API to fetch accurate, up-to-date wea
 ### Setup Instructions
 ```bash
 # Clone the repository
-git clone 
+git clone https://github.com/grvillamer/cccs106-projects.git
 cd cccs106-projects/mod6_labs
 
 # Create virtual environment
